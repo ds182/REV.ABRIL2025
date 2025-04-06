@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revista Digital</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .cover img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .content {
+            margin-top: 20px;
+        }
+        h1 {
+            font-size: 24px;
+            color: #333;
+        }
+        p {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.6;
+        }
+        .menu-container {
+            margin-top: 20px;
+            background-color: #001f3f;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+        }
+        .menu-container span {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .menu-button {
+            background-color: #d1d1d1;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .menu-button:hover {
+            background-color: #00ff00;
+        }
+        .menu-button div {
+            width: 25px;
+            height: 3px;
+            background-color: black;
+            margin: 5px 0;
+        }
+        .menu-list {
+            display: none;
+            background-color: white;
+            color: black;
+            position: absolute;
+            top: 60px;
+            width: 200px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            padding: 10px;
+            text-align: left;
+        }
+        .menu-list ul {
+            list-style: none;
+            padding: 0;
+        }
+        .menu-list li {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            cursor: pointer;
+        }
+        .menu-list li:hover {
+            background-color: #f4f4f4;
+        }
+        footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #888;
+            padding: 10px;
+            background: #f4f4f4;
+        }
+        @media (max-width: 600px) {
+            .container {
+                width: 90%;
+                padding: 10px;
+            }
+            h1 {
+                font-size: 20px;
+            }
+            p {
+                font-size: 14px;
+            }
+        }
+    </style>
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menuList");
+            if (menu.style.display === "none" || menu.style.display === "") {
+                menu.style.display = "block";
+            } else {
+                menu.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="cover">
+            <img src="https://i.ibb.co/zg65vvp/Cover-Page.png" alt="Cover-Page">
+        </div>
+        <div class="content">
+            <h1>Bienvenido a Nuestra Revista Digital</h1>
+            <p>Explora artículos destacados, material exclusivo y las últimas tendencias en un solo lugar.</p>
+        </div>
+        <div class="menu-container">
+            <span>MENÚ DE LA REVISTA</span>
+            <button class="menu-button" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </button>
+            <div id="menuList" class="menu-list">
+                <ul>
+                    <li><a href="https://ds182.github.io/April-fool-s---Art-1/" target="_blank" style="text-decoration: none; color: black;">1. April Fools' Day</a></li>
+                    <li>2. Futuro artículo</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <footer>
+        © 2025 English School CPS. Todos los derechos reservados.
+    </footer>
+</body>
+</html>
